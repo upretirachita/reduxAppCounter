@@ -18,13 +18,14 @@ const reducer = (state = initialState , action) =>{
     if(action.type==='INCREMENT_FIVE'){
         return {
             ...state,
-            counter:state.counter+5
+            //counter:state.counter+5 if we don't pass value 
+            counter:state.counter+action.value
         };
     }
     if(action.type==='DECREMENT_FIVE'){
         return {
             ...state,
-            counter:state.counter-5
+            counter:state.counter-action.value
         };
     }
     return state
